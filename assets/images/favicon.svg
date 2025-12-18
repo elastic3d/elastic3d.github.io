@@ -1,0 +1,18 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <circle id="c1" cx="24" cy="32" r="20" />
+    <circle id="c2" cx="40" cy="32" r="20" />
+    <clipPath id="clipC1">
+      <use href="#c1" />
+    </clipPath>
+  </defs>
+
+  <!-- Left Circle: Red -->
+  <use href="#c1" fill="#ff0000" />
+
+  <!-- Right Circle: Cyan -->
+  <use href="#c2" fill="#00ffff" />
+
+  <!-- Intersection: White (Right circle clipped by Left circle) -->
+  <use href="#c2" fill="#ffffff" clip-path="url(#clipC1)" />
+</svg>

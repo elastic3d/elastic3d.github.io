@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-33WMDTTHLZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-33WMDTTHLZ');
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic3D: Controllable Stereo Video Conversion</title>
+    <meta name="description"
+        content="Official project page for 'Controllable Stereo Video Conversion with Guided Latent Decoding'. Turn 2D videos into high-quality 3D stereo videos with controllable depth using latent diffusion models.">
+    <meta name="keywords"
+        content="Stereo Video Conversion, Monocular to Stereo, 3D Video Generation, Latent Diffusion, Generative AI, Computer Vision, Depth Estimation, Guided Decoding">
+    <meta name="author" content="Nando Metzger">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elastic3d.github.io/">
+    <meta property="og:title" content="Controllable Stereo Video Conversion">
+    <meta property="og:description"
+        content="Turn 2D videos into 3D stereo with controllable depth. A novel latent diffusion approach for high-fidelity, warping-free stereo generation.">
+    <meta property="og:image" content="https://elastic3d.github.io/assets/images/slim_teaser.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elastic3d.github.io/">
+    <meta property="twitter:title" content="Controllable Stereo Video Conversion">
+    <meta property="twitter:description"
+        content="Turn 2D videos into 3D stereo with controllable depth. A novel latent diffusion approach for high-fidelity, warping-free stereo generation.">
+    <meta property="twitter:image" content="https://elastic3d.github.io/assets/images/slim_teaser.png">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg-noise"></div>
+    <div class="bg-spotlight"></div>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero animate-in">
+            <div class="title-wrapper">
+                <h1 class="glitch-layer red" style="display: flex; flex-direction: column; align-items: center;">
+                    <span>Elastic3D:</span>
+                    <span style="font-size: 1em; margin-top: 0.2em;">Controllable Stereo Video Conversion with Guided
+                        Latent Decoding</span>
+                </h1>
+                <h1 class="glitch-layer cyan" aria-hidden="true"
+                    style="display: flex; flex-direction: column; align-items: center;">
+                    <span>Elastic3D:</span>
+                    <span style="font-size: 1em; margin-top: 0.2em;">Controllable Stereo Video Conversion with Guided
+                        Latent Decoding</span>
+                </h1>
+            </div>
+
+            <div class="authors">
+                <a href="https://nandometzger.github.io/" target="_blank" class="anaglyph-link">
+                    <span class="layer red">Nando Metzger<sup>1,2</sup></span>
+                    <span class="layer cyan" aria-hidden="true">Nando Metzger<sup>1,2</sup></span>
+                </a>
+                <a href="https://prunetruong.com/" target="_blank" class="anaglyph-link">
+                    <span class="layer red">Prune Truong<sup>2</sup></span>
+                    <span class="layer cyan" aria-hidden="true">Prune Truong<sup>2</sup></span>
+                </a>
+                <a href="https://goutamgmb.github.io/" target="_blank" class="anaglyph-link">
+                    <span class="layer red">Goutam Bhat<sup>2</sup></span>
+                    <span class="layer cyan" aria-hidden="true">Goutam Bhat<sup>2</sup></span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=FZuNgqIAAAAJ&hl=en" target="_blank"
+                    class="anaglyph-link">
+                    <span class="layer red">Konrad Schindler<sup>1</sup></span>
+                    <span class="layer cyan" aria-hidden="true">Konrad Schindler<sup>1</sup></span>
+                </a>
+                <a href="https://federicotombari.github.io/" target="_blank" class="anaglyph-link">
+                    <span class="layer red">Federico Tombari<sup>2,3</sup></span>
+                    <span class="layer cyan" aria-hidden="true">Federico Tombari<sup>2,3</sup></span>
+                </a>
+            </div>
+
+            <div class="affiliations">
+                <span class="anaglyph-text">
+                    <span class="layer red"><sup>1</sup>ETH Zurich</span>
+                    <span class="layer cyan" aria-hidden="true"><sup>1</sup>ETH Zurich</span>
+                </span>
+                <span class="anaglyph-text">
+                    <span class="layer red"><sup>2</sup>Google</span>
+                    <span class="layer cyan" aria-hidden="true"><sup>2</sup>Google</span>
+                </span>
+                <span class="anaglyph-text">
+                    <span class="layer red"><sup>3</sup>TU Munich</span>
+                    <span class="layer cyan" aria-hidden="true"><sup>3</sup>TU Munich</span>
+                </span>
+            </div>
+
+            <div class="btn-group">
+                <!-- Primary (White) Button: Subtractive Mix -->
+                <a href="assets/paper.pdf" class="btn btn-primary anaglyph-button">
+                    <!-- Layer 1 (Cyan/Base) -->
+                    <span class="layer cyan">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Paper (56MB)
+                    </span>
+                    <!-- Layer 2 (Red/Overlay) -->
+                    <span class="layer red" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Paper (56MB)
+                    </span>
+                </a>
+
+                <!-- Secondary (White) Button: arXiv -->
+                <a href="https://arxiv.org/abs/2512.14236" class="btn btn-primary anaglyph-button">
+                    <span class="layer cyan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        arXiv
+                    </span>
+                    <span class="layer red" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        arXiv
+                    </span>
+                </a>
+            </div>
+
+            <!-- Showcase Video -->
+            <!-- Showcase Carousel -->
+            <div class="showcase-carousel-container">
+                <button class="carousel-nav prev" aria-label="Previous">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="showcase-carousel">
+                    <!-- Javascript will inject items here -->
+                </div>
+                <button class="carousel-nav next" aria-label="Next">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+
+        </section>
+
+        <!-- Abstract -->
+        <section class="abstract-box">
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="display: inline-block; margin-right: 0.5rem; color: var(--accent-color);">TL;DR:</h3>
+                <span style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary);">
+                    We turn 2D videos into 3D stereo videos using a controllable end-to-end model with a novel guided
+                    Decoder. No warping, high sharpness, minimal binocular rivalry, and adjustable 3D strength.
+                </span>
+            </div>
+            <details>
+                <summary
+                    style="cursor: pointer; color: var(--text-secondary); font-weight: 600; text-decoration: underline;">
+                    Read full abstract</summary>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    The growing demand for immersive 3D content calls for automated monocular-to-stereo video
+                    conversion. We present a controllable, direct end-to-end method for upgrading a conventional video
+                    to a binocular one. Our approach, based on (conditional) latent diffusion, avoids artifacts due to
+                    explicit depth estimation and warping. The key to its high-quality stereo video output is a novel,
+                    guided VAE decoder that ensures sharp and epipolar-consistent stereo video output. Moreover, our
+                    method gives the user control over the strength of the stereo effect (respectively, the disparity
+                    range) at inference time, via an intuitive, scalar tuning knob. Experiments on real-world stereo
+                    videos show that our method outperforms both traditional and recent baselines.
+                </p>
+            </details>
+
+
+            <div class="figure" style="margin-top: 2rem;">
+                <img src="assets/images/slim_teaser.png" alt="Teaser: Controllable Stereo Video Conversion"
+                    style="max-width: 100%; width: 60%; box-shadow: none;" fetchpriority="high">
+                <!-- <p class="caption">Figure 1: <strong>Teaser.</strong> Direct, warping-free stereo video conversion with -->
+                <!-- controllable 3D strength.</p> -->
+            </div>
+        </section>
+
+        <!-- Method -->
+        <section id="method">
+            <h2>Method</h2>
+            <p>Our guided latent decoding strategy enables high-fidelity stereo generation. A frozen VAE Encoder
+                computes the latent code of the input video. The synthesis network then generates the right-view latent,
+                conditioned on a 3D strength control token. Finally, our Guided Decoder renders the high-fidelity
+                output using both the generated latent and the original video as guidance.</p>
+
+            <div class="figure">
+                <img src="assets/images/method.png" alt="Guided VAE Architecture" style="max-width: 40%;"
+                    loading="lazy">
+                <!-- <p class="caption">Figure 2: <strong>Inference Pipeline.</strong> A frozen VAE Encoder computes the
+                    latent code of the input video. The synthesis network then generates the right-view latent,
+                    conditioned on a 3D strength control token. Finally, our Guided Decoder renders the high-fidelity
+                    output using both the generated latent and the original video as guidance.</p> -->
+            </div>
+
+
+
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <h3>Control</h3>
+            <p> We can control the median disparity of the generation via a 3D strength control token.</p>
+            <div class="figure">
+                <img src="assets/images/conditioning.png" alt="Disparity Conditioning Mechanism"
+                    style="max-width: 50%;">
+                <!-- <p class="caption">Figure 3: <strong>3D Control.</strong> We can control the median disparity of the -->
+                <!-- generation.</p> -->
+            </div>
+            <p> The input can also be interpreted as an abstract slider, allowing for intuitive "3Dness"
+                control.</p>
+            <div class="features-carousel-container showcase-carousel-container">
+                <button class="carousel-nav prev" aria-label="Previous">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+                <div class="features-carousel showcase-carousel">
+                    <!-- Javascript will inject items here -->
+                </div>
+                <button class="carousel-nav next" aria-label="Next">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <h3>High Quality Details</h3>
+            <p>Epipolar Cross-Attention (Structured Skip Connections) in the VAE Decoder recovers details and
+                mitigates
+                binocular rivalry. Our Guided Decoder produces better results than the Stable Diffusion VAE Decoder.
+            </p>
+            <div class="figure">
+                <img src="assets/images/decoding.png" alt="VAE Compression Comparison" style="max-width: 50%;">
+                <!-- <p class="caption">Figure 4: <strong>Guided Decoding.</strong> Epipolar Cross-Attention (Structured
+                        Skip
+                        Connections) in VAE Decoder recover details and mitigate binocular rivalry.</p> -->
+            </div>
+
+            <h3>Speed</h3>
+            <p>Our method runs a 512×512 patch with 16 frames in 1.7s, while the competitors are at least 3×
+                slower.</p>
+            <div class="figure">
+                <img src="assets/images/speed_comparison.png" alt="Speed Comparison Chart"
+                    style="max-width: 50%; padding-top: 10px;">
+            </div>
+        </section>
+
+        <!-- Qualitative Results (Videos) -->
+        <section id="results">
+            <h2>Qualitative Results</h2>
+            <p>Comparison of generated stereo videos.</p>
+
+            <div id="video-gallery" class="video-grid">
+                <!-- Videos will be injected here by script.js -->
+            </div>
+        </section>
+
+        <!-- Quantitative Results -->
+        <section id="quantitative">
+            <h2>Quantitative Results</h2>
+            <p>Performance on the Spatial Video Dataset (AVP) benchmark.</p>
+
+            <div class="abstract-box"
+                style="display: flex; flex-direction: column; gap: 1.5rem; align-items: center; padding: 1.5rem;">
+                <figure class="figure" style="width: 100%; max-width: 800px; margin: 0;">
+                    <img src="assets/images/quantitative_headset_userstudy.png" alt="Headset User Study Results"
+                        style="width: 100%;">
+                    <figcaption>We conducted a user study on a headset and found that our method is preferred over
+                        M2SVid
+                        in most cases. Against Eye2Eye, users were undecided for 37.5% of the time and preferred
+                        Elastic3D
+                        50% of the time.</figcaption>
+                </figure>
+                <figure class="figure" style="width: 100%; max-width: 800px; margin: 0;">
+                    <img src="assets/images/quantitative_performance_.png" alt="Quantitative Performance Metrics"
+                        style="width: 100%;">
+                    <figcaption>Performance metrics for the Spatial Video Dataset (AVP) benchmark. </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- BibTeX -->
+        <section id="bibtex">
+            <h2>Citation</h2>
+            <pre
+                style="background: var(--surface-color); padding: 1.5rem; border-radius: 8px; overflow-x: auto; font-family: 'Fira Code', monospace; font-size: 0.9rem; border: 1px solid var(--glass-border);">
+@article{metzger2025controllable,
+    title={Elastic3D:Controllable Stereo Video Conversion with Guided Latent Decoding},
+    author={Metzger, Nando and Truong, Prune and Bhat, Goutam and Schindler, Konrad and Tombari, Federico},
+    journal={arXiv:2512.14236},
+    year={2025}
+}
+            </pre>
+        </section>
+
+        <footer>
+            <p>© 2025 Nando Metzger. This website is licensed under a <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike
+                    4.0 International License</a>. This means you are free to borrow the source code of this
+                website, we just ask that you link back to
+                this page in the footer. The source code is available on <a
+                    href="https://github.com/elastic3d/elastic3d.github.io">GitHub</a>.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

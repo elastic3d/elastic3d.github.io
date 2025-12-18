@@ -1,0 +1,1191 @@
+:root {
+  --bg-color: #000000;
+  --surface-color: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1a1;
+  --accent-color: #00ffff;
+  /* Cyan to match Anaglyph */
+  --accent-gradient: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --max-width: 1200px;
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from noise/spotlight */
+}
+
+/* Background Atmosphere */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  /* Hidden as requested */
+}
+
+.bg-spotlight {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 80vh;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.08) 0%, rgba(255, 0, 0, 0.05) 30%, transparent 70%);
+  z-index: -2;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* 3D Anaglyph Title */
+.title-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Glitch Animation Active State (Simulates Hover) */
+.title-wrapper.glitch-active .glitch-layer.red {
+  transform: translateX(-10px);
+}
+
+.title-wrapper.glitch-active .glitch-layer.cyan {
+  transform: translateX(10px);
+}
+
+h1.glitch-layer {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0;
+  /* Reset margin for layers */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  mix-blend-mode: screen;
+  transition: transform 0.3s ease;
+  /* Critical for Red + Cyan = White */
+}
+
+.glitch-layer.red {
+  position: relative;
+  /* Keeps the flow */
+  color: #ff0000;
+  transform: translateX(-2.5px);
+  z-index: 2;
+}
+
+.glitch-layer.cyan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #00ffff;
+  transform: translateX(2.5px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Title Hover: Increase disparity */
+.title-wrapper:hover .glitch-layer.red {
+  transform: translateX(-5px);
+}
+
+.title-wrapper:hover .glitch-layer.cyan {
+  transform: translateX(5px);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Components */
+.hero {
+  text-align: center;
+  padding: 8rem 0 4rem;
+}
+
+.authors {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.2rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.authors a {
+  color: var(--text-primary);
+  transition: color 0.2s;
+}
+
+.authors a:hover {
+  color: var(--accent-color);
+  opacity: 1;
+}
+
+.affiliations {
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.authors span {
+  margin: 0;
+}
+
+.anaglyph-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  /* Remove default underline if present */
+}
+
+/* Base layer (Red) defines the flow/size */
+/* Base layer (Red) defines the flow/size */
+.anaglyph-link .layer.red {
+  position: relative;
+  display: inline-block;
+  color: #ff0000;
+  mix-blend-mode: screen;
+  transition: transform 0.2s ease;
+  z-index: 2;
+  transform: translateX(-1px);
+}
+
+/* Overlay layer (Cyan) sits on top */
+/* Overlay layer (Cyan) sits on top */
+.anaglyph-link .layer.cyan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  mix-blend-mode: screen;
+  transition: transform 0.2s ease;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateX(1px);
+}
+
+/* Hover Effect */
+/* Default state (no hover): small separation */
+/* Hover state: large separation */
+
+.anaglyph-link:hover .layer.cyan,
+.anaglyph-link.glitch-active .layer.cyan {
+  transform: translateX(6px);
+}
+
+.anaglyph-link:hover .layer.red,
+.anaglyph-link.glitch-active .layer.red {
+  transform: translateX(-6px);
+}
+
+/* Anaglyph Text (Non-link) */
+.anaglyph-text {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.anaglyph-text .layer.red {
+  position: relative;
+  display: inline-block;
+  color: #ff0000;
+  mix-blend-mode: screen;
+  transition: transform 0.2s ease;
+  z-index: 2;
+  transform: translateX(3px);
+}
+
+.anaglyph-text .layer.cyan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #00ffff;
+  mix-blend-mode: screen;
+  transition: transform 0.2s ease;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateX(-3px);
+}
+
+.anaglyph-text:hover .layer.red,
+.anaglyph-text.glitch-active .layer.red {
+  transform: translateX(-6px);
+  /* Increased pop for glitch visible effect */
+}
+
+.anaglyph-text:hover .layer.cyan,
+.anaglyph-text.glitch-active .layer.cyan {
+  transform: translateX(6px);
+}
+
+/* Remove old hover color change since we use 3D effect now */
+.authors a:hover {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.affiliations {
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.affiliations span {
+  margin: 0 0.5rem;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  background: var(--surface-color);
+  color: var(--text-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  border: 1px solid var(--glass-border);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  /* Ensure container doesn't enforce size if layers do */
+}
+
+/* When btn acts as a wrapper for full anaglyph button, reset its visual styles */
+.btn.anaglyph-button {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Button Anaglyph Styles */
+/* Button Anaglyph Styles */
+.anaglyph-button {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  /* Removed overflow:hidden to allow glitch layers to spill if needed, 
+     but for button shape usually we want containment. 
+     Keeping isolation for blend modes */
+  isolation: isolate;
+  vertical-align: middle;
+  /* Fix vertical alignment issues */
+}
+
+.anaglyph-button .layer {
+  grid-area: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease;
+
+  /* Inherit Button Shape Styles */
+  padding: 0.75rem 1.5rem;
+  border-radius: 99px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  /* Placeholder */
+}
+
+/* Dark Button (Additive: Screen) */
+.anaglyph-button:not(.btn-primary) .layer.red {
+  color: #ff0000;
+  mix-blend-mode: screen;
+  z-index: 2;
+  transform: translateX(-1px);
+}
+
+.anaglyph-button:not(.btn-primary) .layer.cyan {
+  color: #00ffff;
+  mix-blend-mode: screen;
+  z-index: 1;
+  transform: translateX(1px);
+}
+
+.anaglyph-button:not(.btn-primary):hover .layer.red {
+  transform: translateX(-3px);
+}
+
+.anaglyph-button:not(.btn-primary):hover .layer.cyan {
+  transform: translateX(3px);
+}
+
+
+/* Light Button (Subtractive: Multiply) */
+/* Light Button (Full Body Anaglyph - Additive on Dark BG) */
+/* We want a White button (created by Red + Cyan screen mix) */
+.anaglyph-button.btn-primary .layer.cyan {
+  background: #00ffff;
+  color: #000000;
+  mix-blend-mode: screen;
+  z-index: 2;
+  transform: translateX(-1px);
+}
+
+.anaglyph-button.btn-primary .layer.red {
+  background: #ff0000;
+  color: #000000;
+  mix-blend-mode: screen;
+  z-index: 1;
+  transform: translateX(1px);
+}
+
+/* Fix vertical offset by forcing identical line-height/display */
+.anaglyph-button .layer svg {
+  display: block;
+  /* Removes inline spacing */
+}
+
+/* Button Glitch Support */
+.anaglyph-button.btn-primary:hover .layer.cyan,
+.anaglyph-button.btn-primary.glitch-active .layer.cyan {
+  transform: translateX(-6px);
+}
+
+.anaglyph-button.btn-primary:hover .layer.red,
+.anaglyph-button.btn-primary.glitch-active .layer.red {
+  transform: translateX(6px);
+}
+
+.btn:hover {
+  background: var(--glass-border);
+  /* Keep shadow/transform */
+}
+
+.btn-primary {
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+.btn-primary:hover {
+  background: #e5e5e5;
+}
+
+.abstract-box {
+  background: var(--surface-color);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  margin-bottom: 3rem;
+  margin-bottom: 3rem;
+  backdrop-filter: blur(20px);
+  /* Enhanced Glassmorphism */
+  background: rgba(26, 26, 26, 0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 0 40px rgba(0, 255, 255, 0.1);
+  /* Subtle Cyan Ambient */
+}
+
+.figure {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.figure img {
+  max-width: 75%;
+  /* Reduced width as requested */
+  display: block;
+  margin: 0 auto;
+  /* Centering */
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  padding: 1.5rem;
+}
+
+.caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 1.5rem;
+}
+
+.video-card {
+  background: rgba(26, 26, 26, 0.6);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  border-color: var(--accent-color);
+  box-shadow: 0 15px 40px rgba(0, 255, 255, 0.15);
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 100%;
+  /* Square Aspect Ratio */
+  height: 0;
+  background: #000;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrapper .layer-normal {
+  z-index: 1;
+}
+
+.video-wrapper .layer-anaglyph {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-info {
+  padding: 1rem;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+footer {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--glass-border);
+  margin-top: 4rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Video Comparison Controls */
+.video-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--glass-border);
+}
+
+.method-btn {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  /* More generic modern shape */
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--font-family);
+}
+
+.method-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.method-btn:active {
+  transform: translateY(1px);
+}
+
+.method-btn.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Slider Interface */
+.video-wrapper {
+  cursor: crosshair;
+  --x: 50%;
+  --y: 50%;
+}
+
+.slider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--x);
+  width: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.slider-line-h {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--y);
+  height: 2px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 20;
+}
+
+.slider-label {
+  position: absolute;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 21;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+  transition: opacity 0.2s;
+}
+
+.slider-label.tl {
+  top: 1rem;
+  left: 1rem;
+}
+
+.slider-label.tr {
+  top: 1rem;
+  right: 1rem;
+  text-align: right;
+}
+
+.slider-label.bl {
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.slider-label.br {
+  bottom: 1rem;
+  right: 1rem;
+  text-align: right;
+}
+
+/* 4 Layers Stacking */
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+
+/* 1. Ours Right View (Base) */
+.layer-ours-rv {
+  z-index: 1;
+}
+
+/* 2. Competitor Right View (Top Right) */
+/* Actually, simpler quadrant logic via clip-path */
+
+.layer-ours-rv {
+  z-index: 1;
+}
+
+.layer-comp-rv {
+  z-index: 2;
+  clip-path: inset(0 0 0 var(--x));
+}
+
+.layer-ours-ana {
+  z-index: 3;
+  clip-path: inset(var(--y) 0 0 0);
+}
+
+.layer-comp-ana {
+  z-index: 4;
+  clip-path: inset(var(--y) 0 0 var(--x));
+}
+
+/* --- Carousel Gallery Styles --- */
+#video-gallery {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* Hide cards sliding out */
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  /* Ensure container has height for the absolute cards */
+  /* We will set min-height or aspect ratio via JS or a wrapper, 
+     but for now let's ensure the track drives spacing */
+}
+
+/* The track holds the absolute cards */
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  /* Increased to fit square video (600px) + UI */
+  display: flex;
+  /* Just to center the container content logic if needed */
+  justify-content: center;
+}
+
+/* Base Card Style */
+.carousel-card {
+  position: absolute;
+  /* Key for smooth movement */
+  top: 0;
+  left: 50%;
+  /* Center origin */
+  width: 600px;
+  /* Fixed width base */
+  max-width: 90vw;
+  /* Responsive constraint */
+
+  /* Transition Properties */
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.6s ease,
+    z-index 0s linear 0.3s;
+  /* Delay z-index to avoid popping */
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* --- States --- */
+
+/* Active (Center) */
+.carousel-card.active {
+  transform: translateX(-50%) scale(1);
+  /* Centered */
+  z-index: 20;
+  opacity: 1;
+  border-color: var(--accent-color);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    opacity 0.6s ease,
+    z-index 0s;
+  /* Immediate z-index on active */
+}
+
+/* Previous (Left) */
+.carousel-card.prev {
+  transform: translateX(-120%) scale(0.8);
+  /* Moves left of center */
+  opacity: 0.5;
+  z-index: 10;
+  filter: grayscale(80%);
+  cursor: pointer;
+}
+
+/* Next (Right) */
+.carousel-card.next {
+  transform: translateX(20%) scale(0.8);
+  /* Moves right of center (-50 + 70 = 20) */
+  opacity: 0.5;
+  z-index: 10;
+  filter: grayscale(80%);
+  cursor: pointer;
+}
+
+/* Hidden (Far Left/Right) - For smoother "wrap around" maybe keep them just off screen */
+.carousel-card.hidden {
+  transform: translateX(-50%) scale(0.5);
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.carousel-card.hidden-left {
+  transform: translateX(-200%) scale(0.5);
+}
+
+.carousel-card.hidden-right {
+  transform: translateX(100%) scale(0.5);
+}
+
+/* Overlay for neighbors */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.6));
+  z-index: 20;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.carousel-card.active .card-overlay {
+  opacity: 0;
+}
+
+/* Navigation Buttons */
+/* Redundant block removed */
+
+/* Redundant block removed */
+/* Shared logic is at line 846 */
+
+
+.carousel-nav.prev-btn {
+  left: 2rem;
+}
+
+.carousel-nav.next-btn {
+  right: 2rem;
+}
+
+/* SVG size controlled by HTML attribute to allow 32px */
+
+.video-title {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Showcase Video */
+.showcase-carousel-container {
+  width: 100%;
+  position: relative;
+  /* For button absolute positioning */
+  overflow: hidden;
+  margin: 0 auto 3rem auto;
+}
+
+.showcase-carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 2rem 10%;
+  /* Reduced padding to show neighbors */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Hide scrollbar Firefox */
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  /* More visible initial state */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+}
+
+/* Specific overrides for Showcase Buttons */
+.showcase-carousel-container .carousel-nav.prev:hover {
+  background-color: #ff0000 !important;
+  border-color: #ff0000 !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5) !important;
+}
+
+.showcase-carousel-container .carousel-nav.next:hover {
+  background-color: #00ffff !important;
+  border-color: #00ffff !important;
+  color: black !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5) !important;
+}
+
+/* Shared Navigation Hover Styles */
+/* Prev Button Hover - RED */
+.carousel-nav.prev:hover,
+.carousel-nav.prev-btn:hover {
+  background-color: #ff0000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4) !important;
+  border-color: #ff0000 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  opacity: 1 !important;
+  z-index: 100 !important;
+}
+
+/* Next Button Hover - CYAN */
+.carousel-nav.next:hover,
+.carousel-nav.next-btn:hover {
+  background-color: #00ffff !important;
+  color: #000000 !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4) !important;
+  border-color: #00ffff !important;
+  transform: translateY(-50%) scale(1.1) !important;
+  opacity: 1 !important;
+  z-index: 100 !important;
+}
+
+.carousel-nav.prev {
+  left: 1rem;
+}
+
+.carousel-nav.next {
+  right: 1rem;
+}
+
+/* Hide buttons on mobile if desired, or keep small */
+/* Mobile: Keep buttons accessible size */
+
+.showcase-carousel::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar Chrome/Safari */
+}
+
+.showcase-item {
+  position: relative;
+  flex: 0 0 300px;
+  /* Fixed width for desktop ~300px */
+  aspect-ratio: 9/7;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  scroll-snap-align: center;
+}
+
+.showcase-item:hover,
+.showcase-item.active {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(59, 130, 246, 0.3);
+  border-color: var(--accent-color);
+}
+
+.showcase-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-layer.input {
+  z-index: 1;
+}
+
+.showcase-layer.output {
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+@media (hover: hover),
+(min-width: 769px) {
+  .showcase-item:hover .showcase-layer.output {
+    opacity: 1;
+  }
+}
+
+.showcase-item.active .showcase-layer.output {
+  opacity: 1;
+}
+
+.showcase-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  /* Larger font */
+  font-weight: 700;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
+  /* Full overlay dim */
+  backdrop-filter: blur(2px);
+  z-index: 3;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+@media (hover: hover),
+(min-width: 769px) {
+  .showcase-item:hover .showcase-label {
+    opacity: 0;
+  }
+}
+
+.showcase-item.active .showcase-label,
+.showcase-item.has-interacted .showcase-label {
+  opacity: 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+
+  /* Typography */
+  h1.glitch-layer {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
+
+  /* Layout */
+  .container {
+    padding: 0 15px;
+  }
+
+  .hero {
+    padding: 4rem 0 2rem;
+  }
+
+  /* Authors & Affiliations */
+  .authors {
+    gap: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .affiliations {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+
+  /* Buttons */
+  .btn-group {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    /* Full width buttons on mobile */
+    justify-content: center;
+  }
+
+  /* Showcase Video */
+  .showcase-carousel-container {
+    margin-bottom: 2rem;
+  }
+
+  .showcase-carousel {
+    padding: 1rem 50px;
+    /* Reduced side padding for mobile */
+    gap: 1rem;
+  }
+
+  .showcase-item {
+    flex: 0 0 75vw;
+    /* Almost full width cards mobile */
+    max-width: 400px;
+  }
+
+  /* Figures */
+  .figure img {
+    max-width: 100% !important;
+    width: 100% !important;
+    /* Force override inline width: 60% */
+    /* Override inline style if any */
+  }
+
+  /* Video Gallery Grid (Fallback if carousel broken) */
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Carousel Adjustments */
+  .carousel-track {
+    height: auto;
+    min-height: 600px;
+    /* Give it space */
+  }
+
+  .carousel-card {
+    width: 95vw;
+    /* Almost full width */
+    max-width: 400px;
+    /* Don't get too huge on tablets */
+  }
+
+  /* Reset transforms for mobile might be needed if they drift off screen, 
+     but "active" center logic should hold. 
+     Just ensure "Hidden" cards don't cause horizontal scroll. */
+  .carousel-container {
+    overflow: hidden;
+  }
+
+  /* Touch Interaction Hints */
+  .slider-label {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+}
+
+/* Video Placeholder (Low Res Loading State) */
+.video-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;
+  /* Above video(1,2) but below interactions and overlays */
+  filter: blur(15px);
+  /* Strong blur for artistic low-res look */
+  transform: scale(1.2);
+  /* Zoom in to hide blurred edges */
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.video-placeholder.fade-out {
+  opacity: 0;
+}
+
+.loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 6;
+  /* Above placeholder img (5) */
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+}
+
+.loading-overlay.fade-out {
+  opacity: 0;
+}

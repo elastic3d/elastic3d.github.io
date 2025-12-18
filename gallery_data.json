@@ -1,0 +1,794 @@
+[
+    {
+        "id": "AVP_0005",
+        "title": "AVP 0005",
+        "oursNormal": "AVP_0005_Ours.mp4",
+        "oursAnaglyph": "AVP_0005_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0005_Ours.mp4",
+                "anaglyph": "AVP_0005_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0005_Eye2Eye.mp4",
+                "anaglyph": "AVP_0005_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0005_StereoCrafter.mp4",
+                "anaglyph": "AVP_0005_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0005_SVG.mp4",
+                "anaglyph": "AVP_0005_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0005_m2svid.mp4",
+                "anaglyph": "AVP_0005_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0022",
+        "title": "AVP 0022",
+        "oursNormal": "AVP_0022_Ours.mp4",
+        "oursAnaglyph": "AVP_0022_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0022_Ours.mp4",
+                "anaglyph": "AVP_0022_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0022_Eye2Eye.mp4",
+                "anaglyph": "AVP_0022_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0022_StereoCrafter.mp4",
+                "anaglyph": "AVP_0022_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0022_SVG.mp4",
+                "anaglyph": "AVP_0022_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0022_m2svid.mp4",
+                "anaglyph": "AVP_0022_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0029",
+        "title": "AVP 0029",
+        "oursNormal": "AVP_0029_Ours.mp4",
+        "oursAnaglyph": "AVP_0029_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0029_Ours.mp4",
+                "anaglyph": "AVP_0029_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0029_Eye2Eye.mp4",
+                "anaglyph": "AVP_0029_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0029_StereoCrafter.mp4",
+                "anaglyph": "AVP_0029_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0029_SVG.mp4",
+                "anaglyph": "AVP_0029_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0029_m2svid.mp4",
+                "anaglyph": "AVP_0029_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0040",
+        "title": "AVP 0040",
+        "oursNormal": "AVP_0040_Ours.mp4",
+        "oursAnaglyph": "AVP_0040_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0040_Ours.mp4",
+                "anaglyph": "AVP_0040_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0040_Eye2Eye.mp4",
+                "anaglyph": "AVP_0040_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0040_StereoCrafter.mp4",
+                "anaglyph": "AVP_0040_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0040_SVG.mp4",
+                "anaglyph": "AVP_0040_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0040_m2svid.mp4",
+                "anaglyph": "AVP_0040_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0042",
+        "title": "AVP 0042",
+        "oursNormal": "AVP_0042_Ours.mp4",
+        "oursAnaglyph": "AVP_0042_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0042_Ours.mp4",
+                "anaglyph": "AVP_0042_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0042_Eye2Eye.mp4",
+                "anaglyph": "AVP_0042_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0042_StereoCrafter.mp4",
+                "anaglyph": "AVP_0042_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0042_SVG.mp4",
+                "anaglyph": "AVP_0042_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0042_m2svid.mp4",
+                "anaglyph": "AVP_0042_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0047",
+        "title": "AVP 0047",
+        "oursNormal": "AVP_0047_Ours.mp4",
+        "oursAnaglyph": "AVP_0047_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0047_Ours.mp4",
+                "anaglyph": "AVP_0047_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0047_Eye2Eye.mp4",
+                "anaglyph": "AVP_0047_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0047_StereoCrafter.mp4",
+                "anaglyph": "AVP_0047_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0047_SVG.mp4",
+                "anaglyph": "AVP_0047_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0047_m2svid.mp4",
+                "anaglyph": "AVP_0047_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0102",
+        "title": "AVP 0102",
+        "oursNormal": "AVP_0102_Ours.mp4",
+        "oursAnaglyph": "AVP_0102_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0102_Ours.mp4",
+                "anaglyph": "AVP_0102_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0102_Eye2Eye.mp4",
+                "anaglyph": "AVP_0102_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0102_StereoCrafter.mp4",
+                "anaglyph": "AVP_0102_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0102_SVG.mp4",
+                "anaglyph": "AVP_0102_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0102_m2svid.mp4",
+                "anaglyph": "AVP_0102_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0104",
+        "title": "AVP 0104",
+        "oursNormal": "AVP_0104_Ours.mp4",
+        "oursAnaglyph": "AVP_0104_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0104_Ours.mp4",
+                "anaglyph": "AVP_0104_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0104_Eye2Eye.mp4",
+                "anaglyph": "AVP_0104_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0104_StereoCrafter.mp4",
+                "anaglyph": "AVP_0104_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0104_SVG.mp4",
+                "anaglyph": "AVP_0104_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0104_m2svid.mp4",
+                "anaglyph": "AVP_0104_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0106",
+        "title": "AVP 0106",
+        "oursNormal": "AVP_0106_Ours.mp4",
+        "oursAnaglyph": "AVP_0106_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0106_Ours.mp4",
+                "anaglyph": "AVP_0106_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0106_Eye2Eye.mp4",
+                "anaglyph": "AVP_0106_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0106_StereoCrafter.mp4",
+                "anaglyph": "AVP_0106_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0106_SVG.mp4",
+                "anaglyph": "AVP_0106_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0106_m2svid.mp4",
+                "anaglyph": "AVP_0106_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0108",
+        "title": "AVP 0108",
+        "oursNormal": "AVP_0108_Ours.mp4",
+        "oursAnaglyph": "AVP_0108_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0108_Ours.mp4",
+                "anaglyph": "AVP_0108_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0108_Eye2Eye.mp4",
+                "anaglyph": "AVP_0108_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0108_StereoCrafter.mp4",
+                "anaglyph": "AVP_0108_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0108_SVG.mp4",
+                "anaglyph": "AVP_0108_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0108_m2svid.mp4",
+                "anaglyph": "AVP_0108_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0111",
+        "title": "AVP 0111",
+        "oursNormal": "AVP_0111_Ours.mp4",
+        "oursAnaglyph": "AVP_0111_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0111_Ours.mp4",
+                "anaglyph": "AVP_0111_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0111_Eye2Eye.mp4",
+                "anaglyph": "AVP_0111_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0111_StereoCrafter.mp4",
+                "anaglyph": "AVP_0111_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0111_SVG.mp4",
+                "anaglyph": "AVP_0111_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0111_m2svid.mp4",
+                "anaglyph": "AVP_0111_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0121",
+        "title": "AVP 0121",
+        "oursNormal": "AVP_0121_Ours.mp4",
+        "oursAnaglyph": "AVP_0121_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0121_Ours.mp4",
+                "anaglyph": "AVP_0121_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0121_Eye2Eye.mp4",
+                "anaglyph": "AVP_0121_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0121_StereoCrafter.mp4",
+                "anaglyph": "AVP_0121_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0121_SVG.mp4",
+                "anaglyph": "AVP_0121_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0121_m2svid.mp4",
+                "anaglyph": "AVP_0121_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "AVP_0158",
+        "title": "AVP 0158",
+        "oursNormal": "AVP_0158_Ours.mp4",
+        "oursAnaglyph": "AVP_0158_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "AVP_0158_Ours.mp4",
+                "anaglyph": "AVP_0158_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "AVP_0158_Eye2Eye.mp4",
+                "anaglyph": "AVP_0158_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "AVP_0158_StereoCrafter.mp4",
+                "anaglyph": "AVP_0158_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "AVP_0158_SVG.mp4",
+                "anaglyph": "AVP_0158_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "AVP_0158_m2svid.mp4",
+                "anaglyph": "AVP_0158_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0014",
+        "title": "iphone 0014",
+        "oursNormal": "iPhone_0014_Ours.mp4",
+        "oursAnaglyph": "iPhone_0014_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0014_Ours.mp4",
+                "anaglyph": "iPhone_0014_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0014_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0014_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0014_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0014_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0014_SVG.mp4",
+                "anaglyph": "iPhone_0014_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0014_m2svid.mp4",
+                "anaglyph": "iPhone_0014_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0030",
+        "title": "iphone 0030",
+        "oursNormal": "iPhone_0030_Ours.mp4",
+        "oursAnaglyph": "iPhone_0030_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0030_Ours.mp4",
+                "anaglyph": "iPhone_0030_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0030_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0030_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0030_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0030_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0030_SVG.mp4",
+                "anaglyph": "iPhone_0030_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0030_m2svid.mp4",
+                "anaglyph": "iPhone_0030_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0049",
+        "title": "iphone 0049",
+        "oursNormal": "iPhone_0049_Ours.mp4",
+        "oursAnaglyph": "iPhone_0049_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0049_Ours.mp4",
+                "anaglyph": "iPhone_0049_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0049_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0049_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0049_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0049_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0049_SVG.mp4",
+                "anaglyph": "iPhone_0049_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0049_m2svid.mp4",
+                "anaglyph": "iPhone_0049_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0052",
+        "title": "iphone 0052",
+        "oursNormal": "iPhone_0052_Ours.mp4",
+        "oursAnaglyph": "iPhone_0052_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0052_Ours.mp4",
+                "anaglyph": "iPhone_0052_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0052_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0052_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0052_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0052_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0052_SVG.mp4",
+                "anaglyph": "iPhone_0052_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0052_m2svid.mp4",
+                "anaglyph": "iPhone_0052_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0055",
+        "title": "iphone 0055",
+        "oursNormal": "iPhone_0055_Ours.mp4",
+        "oursAnaglyph": "iPhone_0055_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0055_Ours.mp4",
+                "anaglyph": "iPhone_0055_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0055_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0055_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0055_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0055_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0055_SVG.mp4",
+                "anaglyph": "iPhone_0055_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0055_m2svid.mp4",
+                "anaglyph": "iPhone_0055_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0056",
+        "title": "iphone 0056",
+        "oursNormal": "iPhone_0056_Ours.mp4",
+        "oursAnaglyph": "iPhone_0056_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0056_Ours.mp4",
+                "anaglyph": "iPhone_0056_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0056_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0056_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0056_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0056_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0056_SVG.mp4",
+                "anaglyph": "iPhone_0056_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0056_m2svid.mp4",
+                "anaglyph": "iPhone_0056_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0070",
+        "title": "iphone 0070",
+        "oursNormal": "iPhone_0070_Ours.mp4",
+        "oursAnaglyph": "iPhone_0070_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0070_Ours.mp4",
+                "anaglyph": "iPhone_0070_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0070_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0070_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0070_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0070_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0070_SVG.mp4",
+                "anaglyph": "iPhone_0070_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0070_m2svid.mp4",
+                "anaglyph": "iPhone_0070_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0082",
+        "title": "iphone 0082",
+        "oursNormal": "iPhone_0082_Ours.mp4",
+        "oursAnaglyph": "iPhone_0082_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0082_Ours.mp4",
+                "anaglyph": "iPhone_0082_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0082_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0082_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0082_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0082_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0082_SVG.mp4",
+                "anaglyph": "iPhone_0082_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0082_m2svid.mp4",
+                "anaglyph": "iPhone_0082_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0093",
+        "title": "iphone 0093",
+        "oursNormal": "iPhone_0093_Ours.mp4",
+        "oursAnaglyph": "iPhone_0093_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0093_Ours.mp4",
+                "anaglyph": "iPhone_0093_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0093_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0093_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0093_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0093_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0093_SVG.mp4",
+                "anaglyph": "iPhone_0093_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0093_m2svid.mp4",
+                "anaglyph": "iPhone_0093_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0115",
+        "title": "iphone 0115",
+        "oursNormal": "iPhone_0115_Ours.mp4",
+        "oursAnaglyph": "iPhone_0115_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0115_Ours.mp4",
+                "anaglyph": "iPhone_0115_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0115_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0115_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0115_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0115_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0115_SVG.mp4",
+                "anaglyph": "iPhone_0115_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0115_m2svid.mp4",
+                "anaglyph": "iPhone_0115_m2svid_anaglyph.mp4"
+            }
+        ]
+    },
+    {
+        "id": "iPhone_0130",
+        "title": "iphone 0130",
+        "oursNormal": "iPhone_0130_Ours.mp4",
+        "oursAnaglyph": "iPhone_0130_Ours_anaglyph.mp4",
+        "methods": [
+            {
+                "name": "Ours",
+                "normal": "iPhone_0130_Ours.mp4",
+                "anaglyph": "iPhone_0130_Ours_anaglyph.mp4"
+            },
+            {
+                "name": "Eye2Eye",
+                "normal": "iPhone_0130_Eye2Eye.mp4",
+                "anaglyph": "iPhone_0130_Eye2Eye_anaglyph.mp4"
+            },
+            {
+                "name": "StereoCrafter",
+                "normal": "iPhone_0130_StereoCrafter.mp4",
+                "anaglyph": "iPhone_0130_StereoCrafter_anaglyph.mp4"
+            },
+            {
+                "name": "SVG",
+                "normal": "iPhone_0130_SVG.mp4",
+                "anaglyph": "iPhone_0130_SVG_anaglyph.mp4"
+            },
+            {
+                "name": "m2svid",
+                "normal": "iPhone_0130_m2svid.mp4",
+                "anaglyph": "iPhone_0130_m2svid_anaglyph.mp4"
+            }
+        ]
+    }
+]
