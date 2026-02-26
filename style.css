@@ -110,7 +110,7 @@ h1.glitch-layer {
   position: relative;
   /* Keeps the flow */
   color: #ff0000;
-  transform: translateX(-2.5px);
+  transform: translateX(-1.5px);
   z-index: 2;
 }
 
@@ -120,7 +120,7 @@ h1.glitch-layer {
   left: 0;
   width: 100%;
   color: #00ffff;
-  transform: translateX(2.5px);
+  transform: translateX(1.5px);
   z-index: 1;
   pointer-events: none;
 }
