@@ -87,11 +87,11 @@ h3 {
 
 /* Glitch Animation Active State (Simulates Hover) */
 .title-wrapper.glitch-active .glitch-layer.red {
-  transform: translateX(-10px);
+  transform: translateX(10px);
 }
 
 .title-wrapper.glitch-active .glitch-layer.cyan {
-  transform: translateX(10px);
+  transform: translateX(-10px);
 }
 
 h1.glitch-layer {
@@ -110,7 +110,7 @@ h1.glitch-layer {
   position: relative;
   /* Keeps the flow */
   color: #ff0000;
-  transform: translateX(-1.5px);
+  transform: translateX(1.5px);
   z-index: 2;
 }
 
@@ -120,18 +120,18 @@ h1.glitch-layer {
   left: 0;
   width: 100%;
   color: #00ffff;
-  transform: translateX(1.5px);
+  transform: translateX(-1.5px);
   z-index: 1;
   pointer-events: none;
 }
 
 /* Title Hover: Increase disparity */
 .title-wrapper:hover .glitch-layer.red {
-  transform: translateX(-5px);
+  transform: translateX(5px);
 }
 
 .title-wrapper:hover .glitch-layer.cyan {
-  transform: translateX(5px);
+  transform: translateX(-5px);
 }
 
 h2 {
